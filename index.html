@@ -1,0 +1,112 @@
+<!doctype html>
+
+<title>Job or Not!</title>
+
+<style>
+  #location-box {
+    text-align: center;
+    margin-top: 90px;
+  }
+  form, input {
+    font-size: 19px;
+  }
+  label {
+    display: block;
+  }
+  input[type=submit], button {
+    background-color: #00823b;
+    position: relative;
+    display: -moz-inline-stack;
+    display: inline-block;
+    padding: 0.2em 0.5em 0.15em 0.5em;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 2px 0 #003518;
+    -moz-box-shadow: 0 2px 0 #003518;
+    box-shadow: 0 2px 0 #003518;
+    font-size: 1em;
+    line-height: 1.25;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    color: white;
+    margin: 0;
+  }
+  #result-box {
+    width: 600px;
+    margin: 30px auto;
+  }
+  #job-info {
+    height: 300px;
+    overflow: auto;
+  }
+  #stats-box {
+    width: 600px;
+    margin: 30px auto;
+  }
+  #job-titles li {
+    float: left;
+    list-style: none;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background: #efefef;
+  }
+  .size-10 { font-size: 3em; }
+  .size-9 { font-size: 2em; }
+  .size-8 { font-size: 1.8em; }
+  .size-7 { font-size: 1.5em; }
+  .size-6 { font-size: 1.4em; }
+  .size-5 { font-size: 1.3em; }
+  .size-4 { font-size: 1.2em; }
+  .size-3 { font-size: 1.1em; }
+  .size-2 { font-size: 1em; }
+  .size-1 { font-size: .8em; }
+</style>
+
+<div id="location-box">
+  <form>
+    <label for="location">Where are you looking for a job?</label>
+    <input placeholder="e.g. London" id="location" name="location">
+    <button type="submit">Go</button>
+  </form>
+</div>
+
+<div id="result-box">
+  <div id="job-info"></div>
+  <p>Would you be interested in this job?</p>
+  <form>
+    <input id="interested" type="submit" value="Yes">
+    <input id="not-interested" type="submit" value="No">
+  </form>
+  <p><a href="#">Show me the stats</a></p>
+</div>
+
+<div id="stats-box">
+  <h1>Results</h1>
+
+  <div class="salary">
+    <h2>Average salary of jobs you picked</h2>
+    <p id="average-salary"></p>
+  </div>
+
+  <div class="job-titles">
+    <h2>Common words in job titles you liked</h2>
+    <ul id="job-titles"></ul>
+  </div>
+</div>
+
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/jobs.js"></script>
+<script src="javascripts/search.js"></script>
+<script>
+  // http://yagajobs.co.uk/api/vacancies.json/search?api_key=&location=sm6%200tf
+  var jobConfig = {
+    apiKey: ''
+  };
+  search.init();
+
+</script>
