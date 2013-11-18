@@ -4,6 +4,9 @@ Trying out alternative ways of finding out jobs you might be interested in.
 
 ## Install
 
+Get an API key from [YAGAJOBS](http://yagajobs.co.uk/) and update `index.html`
+with your key.
+
 Checkout the repo and start a server from the project directory. You can use
 the simple Python server if you don't have another:
 
